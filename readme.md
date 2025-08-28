@@ -22,11 +22,13 @@ Ans:To create element we use document.createElement() and to insert we use docum
 
 3. What is **Event Bubbling** and how does it work?
 Ans: Event Bubbling is a way to travel/propagate in the DOM.when we click or trigger an event on an element the event doesn't stop there. It bubbles up/goes up through its parent elements up to the document. 
- example
-<!-- html -->
-<div id="parent">
+ example 
+HTML code...........
+```<div>
   <button id="child">Click </button>
-</div>
+</div>```
+
+
 <!-- js -->
 document.getElementById("child").addEventListener("click", function() {
   console.log("Child clicked");
