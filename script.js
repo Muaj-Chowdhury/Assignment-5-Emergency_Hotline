@@ -52,5 +52,15 @@ document.getElementById('clear-btn')
 const copyBtns = document.getElementsByClassName('copy-btn');
 let copiedNumber =  document.getElementById('copied-number');
 let copiedConvertedNumber = parseInt(copiedNumber.innerText);
-
-
+for(const copyBtn of copyBtns ){
+copyBtn.addEventListener('click',function(){
+    const textToCopy = copyBtn.parentNode.parentNode.children[3].innerText;
+    navigator.clipboard.writeText(textToCopy)
+    .then(function(){
+        alert('Number is Copied : '+ textToCopy)
+    })
+    .catch(function(error){
+        alert("Could not copy. Error: " + error)
+    })
+})
+}
