@@ -49,3 +49,8 @@ document.getElementById('clear-btn')
 })
 
 // number copy function
+const copyBtns = document.getElementsByClassName('copy-btn');
+let copiedNumber =  document.getElementById('copied-number');
+let copiedConvertedNumber = parseInt(copiedNumber.innerText);
+
+
