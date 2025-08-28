@@ -58,6 +58,8 @@ copyBtn.addEventListener('click',function(){
     navigator.clipboard.writeText(textToCopy)
     .then(function(){
         alert('Number is Copied : '+ textToCopy)
+    copiedConvertedNumber ++;
+    copiedNumber.innerText = copiedConvertedNumber
     })
     .catch(function(error){
         alert("Could not copy. Error: " + error)
